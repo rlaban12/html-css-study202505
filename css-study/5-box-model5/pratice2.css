@@ -1,0 +1,26 @@
+@import url(common.css);
+
+section {
+    width: 800px;
+    margin: 20px auto 20px;
+    background: lightgray;
+    padding: 10px;
+}
+
+section .text{
+    font-size: 30px;
+    text-align: center;
+    padding: 20px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+.snail:hover {
+    background: cornflowerblue;
+    color: yellow;
+    padding: 10px;
+}
