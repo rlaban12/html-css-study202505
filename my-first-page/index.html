@@ -1,108 +1,88 @@
-@import url("../");
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title</title>
+    <link rel="icon" href="star.ico">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
 
-body {
-font-size: 17px;
-font-family: "Noto Sans KR", sans-serif;
-}
+<header>
+    <h1 class="logo">
+        <a href="index.html">
+            <img src="img/logo.png" alt="logo image">
+        </a>
+    </h1>
+    <h2 class="intro">WELCOME</h2>
+    <a href="#" class="menu-open">
+        <span class="menu-txt">MENU</span>
+        <span class="bar-icon">
+                <i class="fas fa-bars"></i>
+            </span>
+    </a>
 
-/* header style */
-header {
-/*background: tomato;*/
-/*border: 4px solid green;*/
+    <nav class="gnb">
+        <a href="#" class="close">
+            <i class="fas fa-times"></i>
+        </a>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Work</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">News</a></li>
+            <li><a href="#">Favorite</a></li>
+        </ul>
+    </nav>
+</header>
 
-position: fixed;
-top: 0;
-z-index: 1000;
-width: 100%;
-display: flex;
-align-items: center;
-padding: 20px 50px;
-color: #fff;
-font-weight: 700;
-}
+<main>
 
-header .logo {
-/*border: 3px solid yellow;*/
-flex: 1;
-}
-header .logo img {
-height: 60px;
-}
-header .intro {
-/*border: 3px solid blue;*/
-flex: 4;
-margin-left: 30px;
-}
-header .menu-open {
-/*border: 3px solid orange;*/
-flex: 1;
-display: flex;
-justify-content: flex-end;
-align-items: center;
-padding-right: 20px;
-}
-header .menu-open .menu-txt {
-font-size: 20px;
-margin-right: 15px;
-}
-header .menu-open .bar-icon {
-font-size: 33px;
-}
-header .gnb {
-background: #000;
-color: #666;
-font-size: 40px;
-padding: 70px 100px;
+    <section class="visual">
+        <div class="overlay"></div>
+        <div class="txt">
+            <p>Creative design with Hong Studio</p>
+            <h3>
+                Website &amp; APP, <br>Responsive Web and <br>Brand Identity
+            </h3>
+            <a href="#">See the work</a>
+        </div>
+    </section>
 
-position: fixed;
-right: -100%;
-top: 0;
-height: 100vh;
+</main>
 
-display: flex;
-flex-direction: row-reverse;
+<script>
+    //버튼의 요소 노드 취득
+    const menuBtn = document.querySelector('header .menu-open');
+    const closeBtn = document.querySelector('.gnb .close');
 
-transition: 0.6s;
-}
-header .gnb.on {
-right: 0;
-}
+    const gnb = document.querySelector('.gnb');
 
-header .gnb .close {
-/*border: 3px solid yellow;*/
-color: #fff;
-}
-header .gnb ul {
-/*border: 3px solid aqua;*/
-margin-right: 200px;
-}
-header .gnb ul li {
-font-weight: 700;
-margin-bottom: 25px;
-}
-header .gnb ul li:hover {
-color: #fff;
-}
+    //클릭 이벤트 생성
+    menuBtn.addEventListener('click', () => {
+        gnb.classList.add('on');
+    });
 
-/* section visual style */
-section.visual {
-background: url("https://an2-img.amz.wtchn.net/image/v2/E7OmlxLKtsdNBGjba7UCSw.webp?jwt=ZXlKaGJHY2lPaUpJVXpJMU5pSjkuZXlKdmNIUnpJanBiSW1SZk1USTRNSGczTWpCeE9EQWlYU3dpY0NJNklpOTJNaTl6ZEc5eVpTOXBiV0ZuWlM4MU1EUTBPRGc0TWpNMk5Ua3lNamtpZlEuYmlNcVdIdDBmZ2oySUFFVDJVRFdlRmowZjVJU3loYkZuRmFGckNFbnZ1aw==")
-no-repeat center/cover;
-height: 100vh;
-display: flex;
-align-items: center;
-}
-section.visual .txt {
-/*background: red;*/
-color: #fff;
-font-size: 18px;
-margin-left: 10%;
-text-shadow: 3px 3px 5px #000;
-}
-section.visual .txt h3 {
-margin: 30px 0;
-font-size: 64px;
-font-weight: 700;
-line-height: 1.3;
-}
+    closeBtn.addEventListener('click', () => {
+        gnb.classList.remove('on');
+    });
+
+    document.addEventListener('keyup', e => {
+        if (e.key === 'Escape') {
+            gnb.classList.toggle('on');
+        }
+    });
+</script>
+
+<footer>
+
+</footer>
+
+</body>
+</html>
+
+
