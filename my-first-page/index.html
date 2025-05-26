@@ -11,36 +11,34 @@
 </head>
 <body>
 
-<header>
-    <h1 class="logo">
-        <a href="index.html">
-            <img src="img/logo.png" alt="logo image">
-        </a>
-    </h1>
-    <h2 class="intro">WELCOME</h2>
-    <a href="#" class="menu-open">
-        <span class="menu-txt">MENU</span>
-        <span class="bar-icon">
+    <header>
+        <h1 class="logo">
+            <a href="index.html">
+                <img src="img/logo.png" alt="logo image">
+            </a>
+        </h1>
+        <h2 class="intro">WELCOME</h2>
+        <a href="#" class="menu-open">
+            <span class="menu-txt">MENU</span>
+            <span class="bar-icon">
                 <i class="fas fa-bars"></i>
             </span>
-    </a>
-
-    <nav class="gnb">
-        <a href="#" class="close">
-            <i class="fas fa-times"></i>
         </a>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Work</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">News</a></li>
-            <li><a href="#">Favorite</a></li>
-        </ul>
-    </nav>
-</header>
 
-<main>
+        <nav class="gnb">
+            <a href="#" class="close">
+                <i class="fas fa-times"></i>
+            </a>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Work</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">News</a></li>
+                <li><a href="#">Favorite</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <section class="visual">
         <div class="overlay"></div>
@@ -53,34 +51,64 @@
         </div>
     </section>
 
-</main>
+    <main>
 
-<script>
-    //버튼의 요소 노드 취득
-    const menuBtn = document.querySelector('header .menu-open');
-    const closeBtn = document.querySelector('.gnb .close');
 
-    const gnb = document.querySelector('.gnb');
+        <div class="main-text">
+            <h3>
+                Great experience <br/>
+                build great brands.
+            </h3>
+            <p>
+                다양한 온라인 서비스들을 구축하고 운영해온 풍부한 경험으로
+                UI/UX 기획과 디자인 그리고 구축에서 운영까지, 우리 스튜디오는
+                고객의 비즈니스를 위해 수준 높은 결과물을 제작하는 크리에이티브
+                파트너(Creative Partner) 입니다.
+                <span>Soongu Hong, HONG STUDIO</span>
+            </p>
+        </div>
 
-    //클릭 이벤트 생성
-    menuBtn.addEventListener('click', () => {
-        gnb.classList.add('on');
-    });
 
-    closeBtn.addEventListener('click', () => {
-        gnb.classList.remove('on');
-    });
+    </main>
 
-    document.addEventListener('keyup', e => {
-        if (e.key === 'Escape') {
-            gnb.classList.toggle('on');
-        }
-    });
-</script>
+    <script>
+        //버튼의 요소 노드 취득
+        const menuBtn = document.querySelector('header .menu-open');
+        const closeBtn = document.querySelector('.gnb .close');
 
-<footer>
+        const gnb = document.querySelector('.gnb');
 
-</footer>
+        //클릭 이벤트 생성
+        menuBtn.addEventListener('click', () => {
+            gnb.classList.add('on');
+        });
+
+        closeBtn.addEventListener('click', () => {
+            gnb.classList.remove('on');
+        });
+
+        document.addEventListener('keyup', e => {
+            if (e.key === 'Escape') {
+                gnb.classList.toggle('on');
+            }
+        });
+    </script>
+
+    <footer>
+        <ul>
+            <li>Hong Studio<br>사업자등록번호:123-12-12345 <br>대표자:홍길동</li>
+            <li>
+                <span>A :</span>서울 강남구 중앙정보처리교육원<br>
+                <span>T :</span>010.7270.9984<br>
+                <span>E :</span>hsg9984@gmail.com<br>
+            </li>
+            <li> &#xa9 Hong Studio 2024 <br>All Rights Reseved</li>
+        </ul>
+
+        <a href="#" id="go-top">
+            <i class="fas fa-arrow-up"></i>
+        </a>
+    </footer>
 
 </body>
 </html>

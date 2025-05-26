@@ -1,0 +1,115 @@
+@import url("common.css");
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-between;
+}
+
+header {
+  /*border: 2px solid black;*/
+}
+
+header .title-container {
+  /*border: 3px solid red;*/
+  display: flex;
+  justify-content: right;
+}
+
+header .title-container .title-container-ul {
+  /*border: 5px solid green;*/
+  width: 15%;
+  display: flex;
+  justify-content: space-between;
+}
+
+header .title-container .title-container-ul a {
+  /*border: 2px solid deeppink;*/
+}
+
+main {
+  /*border: 3px solid black;*/
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main .main-logo {
+  /*border: 2px solid red;*/
+  width: 20%;
+}
+
+main .search-bar {
+  width: 100%;
+  /*border: 2px solid blue;*/
+  display: flex;
+  justify-content: center;
+}
+
+main .search-bar .search-bar-input {
+  /*border: 2px solid orangered;*/
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  width: 20%;
+  height: 35px;
+  padding: 15px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+main .buttons {
+  /*border: 2px solid green;*/
+  display: flex;
+  width: 30%;
+  justify-content: space-evenly;
+  padding-left: 55px;
+  padding-right: 55px;
+}
+
+main .buttons .buttons-search {
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+main .buttons .buttons-phrase {
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+footer {
+  /*border: 3px solid black;*/
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0px 10px 0px;
+}
+
+footer .footer-left {
+  /*border: 3px solid blue;*/
+  width: 20%;
+  display: flex;
+  justify-content: left;
+  gap: 15px;
+}
+
+footer .footer-left a {
+  /*border: 3px solid pink;*/
+  font-size: 15px;
+  color: gray;
+
+}
+
+footer .footer-right {
+  /*border: 3px solid red;*/
+  width: 20%;
+  display: flex;
+  justify-content: right;
+  gap: 15px;
+}
+
+footer .footer-right a {
+  /*border: 3px solid pink;*/
+  font-size: 15px;
+  color: gray;
+}
